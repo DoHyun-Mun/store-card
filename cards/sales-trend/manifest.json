@@ -1,0 +1,18 @@
+{
+  "sap.app": {
+    "id": "store.ai.card.salestrend",
+    "type": "card",
+    "title": "Sales Trend Card",
+    "subTitle": "매출 트렌드 + AI 예측",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.card": {
+    "type": "Component",
+    "header": {
+      "title": "📈 매출 트렌드 + AI 예측",
+      "subTitle": "실적 및 AI 예측 비교"
+    }
+  }
+}

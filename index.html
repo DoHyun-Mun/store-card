@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store AI Dashboard - UI Integration Cards Preview</title>
+    <script src="https://ui5.sap.com/resources/sap-ui-integration.js"
+        id="sap-ui-bootstrap"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-resourceroots='{"store.ai.card": "./cards"}'>
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', '72', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #F5F6FA;
+            padding: 1.5rem;
+            min-height: 100vh;
+        }
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding: 0 0.5rem;
+        }
+        .dashboard-header h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1D2D3E;
+        }
+        .dashboard-header .date {
+            font-size: 0.82rem;
+            color: #8396A8;
+        }
+        .cards-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .card-row {
+            display: grid;
+            gap: 1rem;
+        }
+        .card-row.full { grid-template-columns: 1fr; }
+        .card-row.half { grid-template-columns: 1fr 1fr; }
+        .card-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(29,45,62,0.06);
+        }
+        @media (max-width: 900px) {
+            .card-row.half { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>🤖 AI 대시보드 - UI Integration Cards Preview</h1>
+        <span class="date">2026년 5월 13일 수요일</span>
+    </div>
+
+    <div class="cards-grid">
+        <!-- Row 1: KPI Summary -->
+        <div class="card-row full">
+            <div class="card-wrapper" id="card-kpi"></div>
+        </div>
+
+        <!-- Row 2: AI Insights -->
+        <div class="card-row full">
+            <div class="card-wrapper" id="card-insights"></div>
+        </div>
+
+        <!-- Row 3: Sales Trend + Store Health -->
+        <div class="card-row half">
+            <div class="card-wrapper" id="card-sales"></div>
+            <div class="card-wrapper" id="card-health"></div>
+        </div>
+
+        <!-- Row 4: Order Recommendation + Anomaly Detection -->
+        <div class="card-row half">
+            <div class="card-wrapper" id="card-orders"></div>
+            <div class="card-wrapper" id="card-anomaly"></div>
+        </div>
+
+        <!-- Row 5: Supply Chain Network -->
+        <div class="card-row full">
+            <div class="card-wrapper" id="card-supply"></div>
+        </div>
+
+        <!-- Row 6: Quick Links -->
+        <div class="card-row full">
+            <div class="card-wrapper" id="card-links"></div>
+        </div>
+    </div>
+
+    <script>
+        sap.ui.require(["sap/ui/integration/widgets/Card"], function (Card) {
+
+            // Card 1: KPI Summary
+            new Card({
+                manifest: "./cards/kpi-summary/manifest.json",
+                width: "100%"
+            }).placeAt("card-kpi");
+
+            // Card 2: AI Insights
+            new Card({
+                manifest: "./cards/ai-insights/manifest.json",
+                width: "100%"
+            }).placeAt("card-insights");
+
+            // Card 3: Sales Trend
+            new Card({
+                manifest: "./cards/sales-trend/manifest.json",
+                width: "100%",
+                height: "380px"
+            }).placeAt("card-sales");
+
+            // Card 4: Store Health
+            new Card({
+                manifest: "./cards/store-health/manifest.json",
+                width: "100%",
+                height: "380px"
+            }).placeAt("card-health");
+
+            // Card 5: Order Recommendation
+            new Card({
+                manifest: "./cards/order-recommendation/manifest.json",
+                width: "100%",
+                height: "350px"
+            }).placeAt("card-orders");
+
+            // Card 6: Anomaly Detection
+            new Card({
+                manifest: "./cards/anomaly-detection/manifest.json",
+                width: "100%",
+                height: "350px"
+            }).placeAt("card-anomaly");
+
+            // Card 7: Supply Chain Network
+            new Card({
+                manifest: "./cards/supply-chain/manifest.json",
+                width: "100%",
+                height: "420px"
+            }).placeAt("card-supply");
+
+            // Card 8: Quick Links
+            new Card({
+                manifest: "./cards/quick-links/manifest.json",
+                width: "100%"
+            }).placeAt("card-links");
+        });
+    </script>
+</body>
+</html>

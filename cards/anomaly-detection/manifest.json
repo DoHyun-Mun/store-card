@@ -1,0 +1,18 @@
+{
+  "sap.app": {
+    "id": "store.ai.card.anomalydetection",
+    "type": "card",
+    "title": "Anomaly Detection Card",
+    "subTitle": "이상 탐지 (오늘)",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.card": {
+    "type": "Component",
+    "header": {
+      "title": "🔍 이상 탐지 (오늘)",
+      "subTitle": "실시간 이상 항목 모니터링"
+    }
+  }
+}

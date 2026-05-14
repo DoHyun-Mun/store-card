@@ -1,0 +1,12 @@
+{
+  "name": "store-ai-dashboard-cards",
+  "version": "1.0.0",
+  "description": "SAP Build Work Zone - AI Store Operations Dashboard UI Integration Cards",
+  "scripts": {
+    "start": "npx http-server -p 8080 -c-1",
+    "build": "echo 'No build step required for UI Integration Cards'"
+  },
+  "keywords": ["SAP", "UI Integration Card", "Work Zone", "Dashboard"],
+  "author": "DoHyun Mun",
+  "license": "MIT"
+}

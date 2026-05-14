@@ -1,0 +1,18 @@
+{
+  "sap.app": {
+    "id": "store.ai.card.storehealth",
+    "type": "card",
+    "title": "Store Health Card",
+    "subTitle": "점포별 재고 건전성",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.card": {
+    "type": "Component",
+    "header": {
+      "title": "🗺️ 점포별 재고 건전성",
+      "subTitle": "점포 건전성 점수 현황"
+    }
+  }
+}

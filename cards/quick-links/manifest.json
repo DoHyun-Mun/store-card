@@ -1,0 +1,18 @@
+{
+  "sap.app": {
+    "id": "store.ai.card.quicklinks",
+    "type": "card",
+    "title": "Quick Links Card",
+    "subTitle": "바로가기",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.card": {
+    "type": "Component",
+    "header": {
+      "title": "⚡ 바로가기",
+      "subTitle": "주요 기능 빠른 접근"
+    }
+  }
+}

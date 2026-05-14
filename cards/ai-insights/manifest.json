@@ -1,0 +1,18 @@
+{
+  "sap.app": {
+    "id": "store.ai.card.aiinsights",
+    "type": "card",
+    "title": "AI Insights Card",
+    "subTitle": "오늘의 AI 인사이트",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.card": {
+    "type": "Component",
+    "header": {
+      "title": "🤖 오늘의 AI 인사이트",
+      "subTitle": "실시간 모니터링 알림"
+    }
+  }
+}

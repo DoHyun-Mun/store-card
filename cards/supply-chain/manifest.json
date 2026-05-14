@@ -1,0 +1,18 @@
+{
+  "sap.app": {
+    "id": "store.ai.card.supplychain",
+    "type": "card",
+    "title": "Supply Chain Network Card",
+    "subTitle": "공급망 네트워크",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.card": {
+    "type": "Component",
+    "header": {
+      "title": "🔗 공급망 네트워크",
+      "subTitle": "위험 경로 시각화"
+    }
+  }
+}
