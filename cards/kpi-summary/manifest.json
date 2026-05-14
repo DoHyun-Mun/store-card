@@ -1,21 +1,47 @@
 {
-  "sap.app": {
-    "id": "store.ai.card.kpisummary",
-    "type": "card",
-    "title": "KPI Summary Card",
-    "subTitle": "핵심 KPI 요약",
-    "applicationVersion": {
-      "version": "1.0.0"
-    }
-  },
-  "sap.ui5": {
-    "componentName": "store.ai.card.kpisummary"
-  },
-  "sap.card": {
-    "type": "Component",
-    "header": {
-      "title": "🤖 AI 대시보드",
-      "subTitle": "2026년 5월 13일 수요일"
-    }
-  }
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "store.ai.card.kpisummary",
+		"type": "card",
+		"title": "KPI Summary",
+		"subTitle": "핵심 KPI 요약",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://kpi-managing-my-area"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "store.ai.card.kpisummary.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+		"designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://kpi-managing-my-area"
+			},
+			"title": "🤖 AI 대시보드",
+			"subTitle": "2026년 5월 13일 수요일"
+		}
+	},
+	"sap.platform.mobilecards": {
+		"compatible": false
+	}
 }

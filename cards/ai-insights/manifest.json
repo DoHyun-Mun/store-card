@@ -1,21 +1,47 @@
 {
-  "sap.app": {
-    "id": "store.ai.card.aiinsights",
-    "type": "card",
-    "title": "AI Insights Card",
-    "subTitle": "오늘의 AI 인사이트",
-    "applicationVersion": {
-      "version": "1.0.0"
-    }
-  },
-  "sap.ui5": {
-    "componentName": "store.ai.card.aiinsights"
-  },
-  "sap.card": {
-    "type": "Component",
-    "header": {
-      "title": "🤖 오늘의 AI 인사이트",
-      "subTitle": "실시간 모니터링 알림"
-    }
-  }
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "store.ai.card.aiinsights",
+		"type": "card",
+		"title": "AI Insights",
+		"subTitle": "오늘의 AI 인사이트",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://hint"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "store.ai.card.aiinsights.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+		"designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://hint"
+			},
+			"title": "오늘의 AI 인사이트",
+			"subTitle": "실시간 모니터링 알림"
+		}
+	},
+	"sap.platform.mobilecards": {
+		"compatible": false
+	}
 }

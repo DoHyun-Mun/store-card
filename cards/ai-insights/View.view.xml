@@ -1,0 +1,83 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="store.ai.card.aiinsights.Card">
+    <html:style>
+        .insightCard {
+            background: #fff;
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            border-left: 4px solid #E5E8ED;
+            box-shadow: 0 1px 4px rgba(29,45,62,0.06);
+            margin-bottom: 0.5rem;
+        }
+        .insightCard.HIGH { border-left-color: #D93025; }
+        .insightCard.MEDIUM { border-left-color: #E37400; }
+        .insightCard.LOW { border-left-color: #188038; }
+        .insightBadge {
+            display: inline-block;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            margin-bottom: 0.3rem;
+        }
+        .insightBadge.HIGH { background: #FCE8E6; color: #D93025; }
+        .insightBadge.MEDIUM { background: #FEF3E0; color: #E37400; }
+        .insightBadge.LOW { background: #E6F4EA; color: #188038; }
+        .insightTitle { font-size: 0.78rem; font-weight: 600; color: #1D2D3E; margin-bottom: 0.2rem; }
+        .insightDesc { font-size: 0.7rem; color: #556B82; margin-bottom: 0.3rem; }
+        .insightMetrics { display: flex; gap: 1rem; margin-bottom: 0.3rem; }
+        .insightMetricLabel { font-size: 0.58rem; color: #8396A8; }
+        .insightMetricValue { font-size: 0.75rem; font-weight: 700; color: #1D2D3E; }
+    </html:style>
+    <VBox class="sapUiSmallMargin">
+        <html:div class="insightCard MEDIUM">
+            <html:span class="insightBadge MEDIUM">MEDIUM</html:span>
+            <html:div class="insightTitle">잠실 지점 customerCount 급증 감지 (+26)</html:div>
+            <html:div class="insightDesc">실적: 46 / 예측: 20 (Z-Score: 8.7)</html:div>
+            <html:div class="insightMetrics">
+                <html:div><html:span class="insightMetricLabel">실적건</html:span><html:br/><html:span class="insightMetricValue">46</html:span></html:div>
+                <html:div><html:span class="insightMetricLabel">Z-SCORE</html:span><html:br/><html:span class="insightMetricValue">8.7</html:span></html:div>
+            </html:div>
+        </html:div>
+        <html:div class="insightCard MEDIUM">
+            <html:span class="insightBadge MEDIUM">MEDIUM</html:span>
+            <html:div class="insightTitle">강남 본점 revenue 급증 감지 (+934346)</html:div>
+            <html:div class="insightDesc">실적: 1684346 / 예측: 750000 (Z-Score: 8.3)</html:div>
+            <html:div class="insightMetrics">
+                <html:div><html:span class="insightMetricLabel">실적값</html:span><html:br/><html:span class="insightMetricValue">1684346</html:span></html:div>
+                <html:div><html:span class="insightMetricLabel">Z-SCORE</html:span><html:br/><html:span class="insightMetricValue">8.3</html:span></html:div>
+            </html:div>
+        </html:div>
+        <html:div class="insightCard LOW">
+            <html:span class="insightBadge LOW">LOW</html:span>
+            <html:div class="insightTitle">AI 발주 추천 25건 대기 중</html:div>
+            <html:div class="insightDesc">총 추천 수량: 3771개, HIGH 5건 포함</html:div>
+            <html:div class="insightMetrics">
+                <html:div><html:span class="insightMetricLabel">추천 건수</html:span><html:br/><html:span class="insightMetricValue">25건</html:span></html:div>
+                <html:div><html:span class="insightMetricLabel">총 수량</html:span><html:br/><html:span class="insightMetricValue">3771개</html:span></html:div>
+            </html:div>
+        </html:div>
+        <html:div class="insightCard HIGH">
+            <html:span class="insightBadge HIGH">HIGH</html:span>
+            <html:div class="insightTitle">서초 지점 '노트북 에어 13' 결품 임박</html:div>
+            <html:div class="insightDesc">현재고 17개, 7일 예측수요 172개</html:div>
+            <html:div class="insightMetrics">
+                <html:div><html:span class="insightMetricLabel">현재고</html:span><html:br/><html:span class="insightMetricValue">17개</html:span></html:div>
+                <html:div><html:span class="insightMetricLabel">예측수요(7일)</html:span><html:br/><html:span class="insightMetricValue">172개</html:span></html:div>
+            </html:div>
+        </html:div>
+        <html:div class="insightCard HIGH">
+            <html:span class="insightBadge HIGH">HIGH</html:span>
+            <html:div class="insightTitle">강남 본점 '노트북 에어 13' 결품 임박</html:div>
+            <html:div class="insightDesc">현재고 13개, 7일 예측수요 218개</html:div>
+            <html:div class="insightMetrics">
+                <html:div><html:span class="insightMetricLabel">현재고</html:span><html:br/><html:span class="insightMetricValue">13개</html:span></html:div>
+                <html:div><html:span class="insightMetricLabel">예측수요(7일)</html:span><html:br/><html:span class="insightMetricValue">218개</html:span></html:div>
+            </html:div>
+        </html:div>
+    </VBox>
+</mvc:View>
