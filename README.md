@@ -3,6 +3,8 @@
 SAP Build Work Zone Advanced Edition에서 사용할 수 있는 **UI Integration Component Cards** 모음입니다.  
 점포 AI 운영 시스템 대시보드의 각 컴포넌트를 독립적인 UI Card로 구현했습니다.
 
+> ⚠️ **중요**: 이 프로젝트는 실제 Build Work Zone Advanced 에디션에 각각의 카드로 배포되어야 하므로, 그 기반하에 표준에 맞게 설계되고 개발되어야 한다.
+
 ## 📋 카드 목록
 
 | # | 카드명 | 폴더 | 설명 |
