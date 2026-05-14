@@ -1,21 +1,47 @@
 {
-  "sap.app": {
-    "id": "store.ai.card.quicklinks",
-    "type": "card",
-    "title": "Quick Links Card",
-    "subTitle": "바로가기",
-    "applicationVersion": {
-      "version": "1.0.0"
-    }
-  },
-  "sap.ui5": {
-    "componentName": "store.ai.card.quicklinks"
-  },
-  "sap.card": {
-    "type": "Component",
-    "header": {
-      "title": "⚡ 바로가기",
-      "subTitle": "주요 기능 빠른 접근"
-    }
-  }
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "store.ai.card.quicklinks",
+		"type": "card",
+		"title": "Quick Links",
+		"subTitle": "바로가기",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://action"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "store.ai.card.quicklinks.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+		"designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://action"
+			},
+			"title": "⚡ 바로가기",
+			"subTitle": "주요 기능 빠른 접근"
+		}
+	},
+	"sap.platform.mobilecards": {
+		"compatible": false
+	}
 }

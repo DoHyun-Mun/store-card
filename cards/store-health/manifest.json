@@ -1,21 +1,47 @@
 {
-  "sap.app": {
-    "id": "store.ai.card.storehealth",
-    "type": "card",
-    "title": "Store Health Card",
-    "subTitle": "점포별 재고 건전성",
-    "applicationVersion": {
-      "version": "1.0.0"
-    }
-  },
-  "sap.ui5": {
-    "componentName": "store.ai.card.storehealth"
-  },
-  "sap.card": {
-    "type": "Component",
-    "header": {
-      "title": "🗺️ 점포별 재고 건전성",
-      "subTitle": "점포 건전성 점수 현황"
-    }
-  }
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "store.ai.card.storehealth",
+		"type": "card",
+		"title": "Store Health",
+		"subTitle": "점포별 재고 건전성",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://map"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "store.ai.card.storehealth.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+		"designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://map"
+			},
+			"title": "🗺️ 점포별 재고 건전성",
+			"subTitle": "점포 건전성 점수 현황"
+		}
+	},
+	"sap.platform.mobilecards": {
+		"compatible": false
+	}
 }

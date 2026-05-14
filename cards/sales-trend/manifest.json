@@ -1,21 +1,47 @@
 {
-  "sap.app": {
-    "id": "store.ai.card.salestrend",
-    "type": "card",
-    "title": "Sales Trend Card",
-    "subTitle": "매출 트렌드 + AI 예측",
-    "applicationVersion": {
-      "version": "1.0.0"
-    }
-  },
-  "sap.ui5": {
-    "componentName": "store.ai.card.salestrend"
-  },
-  "sap.card": {
-    "type": "Component",
-    "header": {
-      "title": "📈 매출 트렌드 + AI 예측",
-      "subTitle": "실적 및 AI 예측 비교"
-    }
-  }
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "store.ai.card.salestrend",
+		"type": "card",
+		"title": "Sales Trend",
+		"subTitle": "매출 트렌드 + AI 예측",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://line-chart"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "store.ai.card.salestrend.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+		"designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://line-chart"
+			},
+			"title": "📈 매출 트렌드 + AI 예측",
+			"subTitle": "실적 및 AI 예측 비교"
+		}
+	},
+	"sap.platform.mobilecards": {
+		"compatible": false
+	}
 }

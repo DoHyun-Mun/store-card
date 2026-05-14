@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="store.ai.card.anomalydetection.Card">
+    <html:style>
+        .anomList { padding: 0.5rem 0.75rem; font-family: "Inter", "72", sans-serif; }
+        .anomItem { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem; border-bottom: 1px solid #EEF1F5; }
+        .anomItem:last-child { border-bottom: none; }
+        .anomIcon { font-size: 1.1rem; flex-shrink: 0; }
+        .anomInfo { flex: 1; min-width: 0; }
+        .anomTitle { font-weight: 600; font-size: 0.75rem; color: #1D2D3E; }
+        .anomSub { font-size: 0.65rem; color: #8396A8; }
+        .anomBadge { font-size: 0.6rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; }
+        .anomBadge.SPIKE { background: #E6F4EA; color: #2E7D32; }
+        .anomBadge.DROP { background: #FFEBEE; color: #C62828; }
+    </html:style>
+    <html:div class="anomList">
+        <html:div class="anomItem">
+            <html:span class="anomIcon">📈</html:span>
+            <html:div class="anomInfo"><html:div class="anomTitle">강남 본점 revenue</html:div><html:div class="anomSub">Z:8.3 | Dev:934346</html:div></html:div>
+            <html:span class="anomBadge SPIKE">SPIKE</html:span>
+        </html:div>
+        <html:div class="anomItem">
+            <html:span class="anomIcon">📉</html:span>
+            <html:div class="anomInfo"><html:div class="anomTitle">서초 지점 quantity</html:div><html:div class="anomSub">Z:-3.0 | Dev:-15</html:div></html:div>
+            <html:span class="anomBadge DROP">DROP</html:span>
+        </html:div>
+        <html:div class="anomItem">
+            <html:span class="anomIcon">📈</html:span>
+            <html:div class="anomInfo"><html:div class="anomTitle">잠실 지점 customerCount</html:div><html:div class="anomSub">Z:8.7 | Dev:26</html:div></html:div>
+            <html:span class="anomBadge SPIKE">SPIKE</html:span>
+        </html:div>
+        <html:div class="anomItem">
+            <html:span class="anomIcon">📉</html:span>
+            <html:div class="anomInfo"><html:div class="anomTitle">여의도 지점 profit</html:div><html:div class="anomSub">Z:-4.7 | Dev:-124667</html:div></html:div>
+            <html:span class="anomBadge DROP">DROP</html:span>
+        </html:div>
+        <html:div class="anomItem">
+            <html:span class="anomIcon">📈</html:span>
+            <html:div class="anomInfo"><html:div class="anomTitle">홍대 지점 revenue</html:div><html:div class="anomSub">Z:-3.4 | Dev:-280540</html:div></html:div>
+            <html:span class="anomBadge SPIKE">SPIKE</html:span>
+        </html:div>
+    </html:div>
+</mvc:View>

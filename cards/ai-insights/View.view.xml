@@ -5,13 +5,20 @@
           width="100%"
           controllerName="store.ai.card.aiinsights.Card">
     <html:style>
+        .insightsRow {
+            display: flex;
+            gap: 0.6rem;
+            padding: 0.5rem 0.75rem 0.75rem;
+            font-family: "Inter", "72", sans-serif;
+        }
         .insightCard {
+            flex: 1 1 0;
+            min-width: 0;
             background: #fff;
             border-radius: 12px;
             padding: 0.85rem 1rem;
             border-left: 4px solid #E5E8ED;
             box-shadow: 0 1px 4px rgba(29,45,62,0.06);
-            margin-bottom: 0.5rem;
         }
         .insightCard.HIGH { border-left-color: #D93025; }
         .insightCard.MEDIUM { border-left-color: #E37400; }
@@ -32,8 +39,9 @@
         .insightMetrics { display: flex; gap: 1rem; margin-bottom: 0.3rem; }
         .insightMetricLabel { font-size: 0.58rem; color: #8396A8; }
         .insightMetricValue { font-size: 0.75rem; font-weight: 700; color: #1D2D3E; }
+        .insightAction { font-size: 0.68rem; color: #0070F2; font-weight: 600; cursor: pointer; text-decoration: none; }
     </html:style>
-    <VBox class="sapUiSmallMargin">
+    <html:div class="insightsRow">
         <html:div class="insightCard MEDIUM">
             <html:span class="insightBadge MEDIUM">MEDIUM</html:span>
             <html:div class="insightTitle">잠실 지점 customerCount 급증 감지 (+26)</html:div>
@@ -42,6 +50,7 @@
                 <html:div><html:span class="insightMetricLabel">실적건</html:span><html:br/><html:span class="insightMetricValue">46</html:span></html:div>
                 <html:div><html:span class="insightMetricLabel">Z-SCORE</html:span><html:br/><html:span class="insightMetricValue">8.7</html:span></html:div>
             </html:div>
+            <html:a class="insightAction">상세 분석 보기 →</html:a>
         </html:div>
         <html:div class="insightCard MEDIUM">
             <html:span class="insightBadge MEDIUM">MEDIUM</html:span>
@@ -51,6 +60,7 @@
                 <html:div><html:span class="insightMetricLabel">실적값</html:span><html:br/><html:span class="insightMetricValue">1684346</html:span></html:div>
                 <html:div><html:span class="insightMetricLabel">Z-SCORE</html:span><html:br/><html:span class="insightMetricValue">8.3</html:span></html:div>
             </html:div>
+            <html:a class="insightAction">상세 분석 보기 →</html:a>
         </html:div>
         <html:div class="insightCard LOW">
             <html:span class="insightBadge LOW">LOW</html:span>
@@ -60,6 +70,7 @@
                 <html:div><html:span class="insightMetricLabel">추천 건수</html:span><html:br/><html:span class="insightMetricValue">25건</html:span></html:div>
                 <html:div><html:span class="insightMetricLabel">총 수량</html:span><html:br/><html:span class="insightMetricValue">3771개</html:span></html:div>
             </html:div>
+            <html:a class="insightAction">발주 추천 검토 →</html:a>
         </html:div>
         <html:div class="insightCard HIGH">
             <html:span class="insightBadge HIGH">HIGH</html:span>
@@ -69,6 +80,7 @@
                 <html:div><html:span class="insightMetricLabel">현재고</html:span><html:br/><html:span class="insightMetricValue">17개</html:span></html:div>
                 <html:div><html:span class="insightMetricLabel">예측수요(7일)</html:span><html:br/><html:span class="insightMetricValue">172개</html:span></html:div>
             </html:div>
+            <html:a class="insightAction">즉시 발주 추천 보기 →</html:a>
         </html:div>
         <html:div class="insightCard HIGH">
             <html:span class="insightBadge HIGH">HIGH</html:span>
@@ -78,6 +90,7 @@
                 <html:div><html:span class="insightMetricLabel">현재고</html:span><html:br/><html:span class="insightMetricValue">13개</html:span></html:div>
                 <html:div><html:span class="insightMetricLabel">예측수요(7일)</html:span><html:br/><html:span class="insightMetricValue">218개</html:span></html:div>
             </html:div>
+            <html:a class="insightAction">즉시 발주 추천 보기 →</html:a>
         </html:div>
-    </VBox>
+    </html:div>
 </mvc:View>

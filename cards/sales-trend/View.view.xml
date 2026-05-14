@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="store.ai.card.salestrend.Card">
+    <html:style>
+        .stContainer { padding: 0.75rem; font-family: "Inter", "72", sans-serif; }
+        .stChart { display: flex; align-items: flex-end; gap: 2px; height: 150px; padding: 0.5rem 0; border-bottom: 1px solid #EEF1F5; }
+        .stBar { flex: 1; border-radius: 3px 3px 0 0; min-width: 0; position: relative; }
+        .stBar.actual { background: #0070F2; }
+        .stBar.forecast { background: #7B2FF2; opacity: 0.6; border: 1px dashed #7B2FF2; background: rgba(123,47,242,0.15); }
+        .stLabels { display: flex; gap: 2px; padding-top: 0.3rem; }
+        .stLabel { flex: 1; font-size: 0.5rem; color: #8396A8; text-align: center; }
+        .stLegend { display: flex; gap: 1rem; margin-top: 0.5rem; justify-content: center; font-size: 0.65rem; color: #556B82; }
+        .stLegendDot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 4px; vertical-align: middle; }
+        .stReason { padding: 0.5rem 0.75rem; background: #F8F9FB; border-radius: 6px; font-size: 0.7rem; line-height: 1.5; border-left: 3px solid #7B2FF2; margin-top: 0.75rem; }
+        .stReasonDown { color: #D93025; font-weight: 700; }
+        .stReasonDetail { color: #556B82; margin-left: 0.5rem; }
+    </html:style>
+    <html:div class="stContainer">
+        <html:div class="stChart">
+            <html:div class="stBar actual" style="height:70%"></html:div>
+            <html:div class="stBar actual" style="height:92%"></html:div>
+            <html:div class="stBar actual" style="height:95%"></html:div>
+            <html:div class="stBar actual" style="height:100%"></html:div>
+            <html:div class="stBar actual" style="height:98%"></html:div>
+            <html:div class="stBar actual" style="height:88%"></html:div>
+            <html:div class="stBar actual" style="height:80%"></html:div>
+            <html:div class="stBar actual" style="height:73%"></html:div>
+            <html:div class="stBar forecast" style="height:72%"></html:div>
+            <html:div class="stBar forecast" style="height:70%"></html:div>
+            <html:div class="stBar forecast" style="height:68%"></html:div>
+            <html:div class="stBar forecast" style="height:69%"></html:div>
+            <html:div class="stBar forecast" style="height:71%"></html:div>
+            <html:div class="stBar forecast" style="height:74%"></html:div>
+        </html:div>
+        <html:div class="stLabels">
+            <html:span class="stLabel">04/23</html:span>
+            <html:span class="stLabel">04/24</html:span>
+            <html:span class="stLabel">04/25</html:span>
+            <html:span class="stLabel">04/26</html:span>
+            <html:span class="stLabel">04/27</html:span>
+            <html:span class="stLabel">04/28</html:span>
+            <html:span class="stLabel">04/29</html:span>
+            <html:span class="stLabel">05/08</html:span>
+            <html:span class="stLabel">05/09</html:span>
+            <html:span class="stLabel">05/10</html:span>
+            <html:span class="stLabel">05/11</html:span>
+            <html:span class="stLabel">05/12</html:span>
+            <html:span class="stLabel">05/13</html:span>
+            <html:span class="stLabel">05/14</html:span>
+        </html:div>
+        <html:div class="stLegend">
+            <html:span><html:span class="stLegendDot" style="background:#0070F2"></html:span>실적</html:span>
+            <html:span><html:span class="stLegendDot" style="background:#7B2FF2"></html:span>AI 예측</html:span>
+        </html:div>
+        <html:div class="stReason">
+            <html:span class="stReasonDown">📉 실적 대비 -2.1% 하락 예측</html:span>
+            <html:span class="stReasonDetail">💡 근거: 봄 시즌 수요 증가 · 최근 판매 추세 반영</html:span>
+        </html:div>
+    </html:div>
+</mvc:View>

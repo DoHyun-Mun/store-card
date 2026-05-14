@@ -1,0 +1,52 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="store.ai.card.orderrecommendation.Card">
+    <html:style>
+        .recList { padding: 0.5rem 0.75rem; font-family: "Inter", "72", sans-serif; }
+        .recItem { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem; border-bottom: 1px solid #EEF1F5; }
+        .recItem:last-child { border-bottom: none; }
+        .recRank { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 700; color: white; flex-shrink: 0; }
+        .recRank.HIGH { background: #D93025; }
+        .recRank.MEDIUM { background: #E37400; }
+        .recInfo { flex: 1; min-width: 0; }
+        .recTitle { font-weight: 600; font-size: 0.75rem; color: #1D2D3E; }
+        .recSub { font-size: 0.65rem; color: #8396A8; }
+        .recQty { font-weight: 700; font-size: 0.78rem; color: #0070F2; }
+        .recAction { padding: 0.3rem 0.6rem; border-radius: 4px; background: #0070F2; color: white; font-size: 0.62rem; font-weight: 600; border: none; cursor: pointer; }
+    </html:style>
+    <html:div class="recList">
+        <html:div class="recItem">
+            <html:div class="recRank HIGH">1</html:div>
+            <html:div class="recInfo"><html:div class="recTitle">강남 본점</html:div><html:div class="recSub">노트북 에어 13</html:div></html:div>
+            <html:span class="recQty">+295</html:span>
+            <html:button class="recAction">발주</html:button>
+        </html:div>
+        <html:div class="recItem">
+            <html:div class="recRank HIGH">2</html:div>
+            <html:div class="recInfo"><html:div class="recTitle">서초 지점</html:div><html:div class="recSub">노트북 에어 13</html:div></html:div>
+            <html:span class="recQty">+227</html:span>
+            <html:button class="recAction">발주</html:button>
+        </html:div>
+        <html:div class="recItem">
+            <html:div class="recRank HIGH">3</html:div>
+            <html:div class="recInfo"><html:div class="recTitle">잠실 지점</html:div><html:div class="recSub">노트북 에어 13</html:div></html:div>
+            <html:span class="recQty">+235</html:span>
+            <html:button class="recAction">발주</html:button>
+        </html:div>
+        <html:div class="recItem">
+            <html:div class="recRank MEDIUM">4</html:div>
+            <html:div class="recInfo"><html:div class="recTitle">홍대 지점</html:div><html:div class="recSub">올인원 PC</html:div></html:div>
+            <html:span class="recQty">+102</html:span>
+            <html:button class="recAction">발주</html:button>
+        </html:div>
+        <html:div class="recItem">
+            <html:div class="recRank MEDIUM">5</html:div>
+            <html:div class="recInfo"><html:div class="recTitle">강남 본점</html:div><html:div class="recSub">미니 PC</html:div></html:div>
+            <html:span class="recQty">+172</html:span>
+            <html:button class="recAction">발주</html:button>
+        </html:div>
+    </html:div>
+</mvc:View>

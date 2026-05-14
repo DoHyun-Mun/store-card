@@ -1,0 +1,38 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="store.ai.card.supplychain.Card">
+    <html:style>
+        .scContainer { padding: 0.75rem; font-family: "Inter", "72", sans-serif; }
+        .scLegend { display: flex; gap: 0.8rem; font-size: 0.65rem; color: #8396A8; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .scLegendItem { display: flex; align-items: center; gap: 0.25rem; }
+        .scLegendDot { width: 10px; height: 10px; border-radius: 50%; }
+        .scNetwork { display: flex; align-items: center; justify-content: center; min-height: 200px; gap: 2rem; flex-wrap: wrap; }
+        .scNode { padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.7rem; font-weight: 600; text-align: center; border: 2px solid; }
+        .scNode.product { background: #FFF9C4; border-color: #FFC107; color: #333; }
+        .scNode.store { background: #E3F2FD; border-color: #1976D2; color: #1565C0; }
+        .scArrow { color: #90CAF9; font-size: 1.5rem; }
+        .scGroup { display: flex; flex-direction: column; gap: 0.5rem; }
+    </html:style>
+    <html:div class="scContainer">
+        <html:div class="scLegend">
+            <html:span class="scLegendItem"><html:span class="scLegendDot" style="background:#7C4DFF"></html:span> 공급업체</html:span>
+            <html:span class="scLegendItem"><html:span class="scLegendDot" style="background:#43A047"></html:span> 정상</html:span>
+            <html:span class="scLegendItem"><html:span class="scLegendDot" style="background:#FFC107"></html:span> 주의</html:span>
+            <html:span class="scLegendItem"><html:span class="scLegendDot" style="background:#D93025"></html:span> 부족</html:span>
+            <html:span class="scLegendItem"><html:span class="scLegendDot" style="background:#1976D2"></html:span> 점포</html:span>
+        </html:div>
+        <html:div class="scNetwork">
+            <html:div class="scNode product">27인치 모니터<html:br/>(278)</html:div>
+            <html:span class="scArrow">→</html:span>
+            <html:div class="scGroup">
+                <html:div class="scNode store">🏪 잠실 지점</html:div>
+                <html:div class="scNode store">🏪 종로 지점</html:div>
+                <html:div class="scNode store">🏪 여의도 지점</html:div>
+                <html:div class="scNode store">🏪 이태원 지점</html:div>
+            </html:div>
+        </html:div>
+    </html:div>
+</mvc:View>

@@ -5,52 +5,76 @@
           width="100%"
           controllerName="store.ai.card.kpisummary.Card">
     <html:style>
-        .kpiRow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; padding: 0.75rem; font-family: "Inter", "72", sans-serif; }
-        .kpiCard { background: #fff; border: 1px solid #E5E8ED; border-radius: 12px; padding: 1rem 1.15rem; display: flex; align-items: center; gap: 0.85rem; box-shadow: 0 1px 4px rgba(29,45,62,0.06); }
-        .kpiCard:hover { box-shadow: 0 4px 16px rgba(29,45,62,0.08); transform: translateY(-2px); border-color: #0070F2; }
-        .kpiCard.highlight { border: 2px solid #D93025; background: #FFF8F7; }
-        .kpiIconWrap { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .kpiRow {
+            display: flex;
+            gap: 0.6rem;
+            padding: 0.75rem;
+            font-family: "Inter", "72", sans-serif;
+        }
+        .kpiCard {
+            flex: 1 1 0;
+            min-width: 0;
+            background: #fff;
+            border: 1px solid #E5E8ED;
+            border-radius: 12px;
+            padding: 1rem 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            box-shadow: 0 1px 4px rgba(29,45,62,0.06);
+        }
+        .kpiCard.highlight {
+            border: 2px solid #D93025;
+            background: #FFF8F7;
+        }
+        .kpiIconWrap {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
         .kpiBody { display: flex; flex-direction: column; }
         .kpiValue { font-size: 1.35rem; font-weight: 700; line-height: 1.2; color: #1D2D3E; }
         .kpiLabel { font-size: 0.7rem; font-weight: 500; color: #8396A8; margin-top: 0.1rem; }
         .kpiChangeDown { font-size: 0.68rem; font-weight: 600; color: #D93025; margin-top: 0.15rem; }
         .kpiSublabel { font-size: 0.62rem; color: #8396A8; margin-top: 0.1rem; }
-        @media (max-width: 600px) { .kpiRow { grid-template-columns: repeat(2, 1fr); } }
     </html:style>
-    <VBox width="100%">
-        <html:div class="kpiRow">
-            <html:div class="kpiCard">
-                <html:div class="kpiIconWrap" style="background:#EBF3FE;color:#0070F2">&#x1F4B0;</html:div>
-                <html:div class="kpiBody">
-                    <html:span class="kpiValue">&#x20A9;1.8&#xC5B5;</html:span>
-                    <html:span class="kpiLabel">&#xCD5C;&#xADFC; &#xB9E4;&#xCD9C;</html:span>
-                    <html:span class="kpiChangeDown">&#x2193; &#xC804;&#xC77C; &#xB300;&#xBE44; -0.7%</html:span>
-                </html:div>
-            </html:div>
-            <html:div class="kpiCard">
-                <html:div class="kpiIconWrap" style="background:#E6F4EA;color:#188038">&#x1F3E5;</html:div>
-                <html:div class="kpiBody">
-                    <html:span class="kpiValue">72&#xC810;</html:span>
-                    <html:span class="kpiLabel">&#xC7AC;&#xACE0; &#xAC74;&#xC804;&#xC131;</html:span>
-                    <html:span class="kpiChangeDown">&#x2193; 3</html:span>
-                </html:div>
-            </html:div>
-            <html:div class="kpiCard">
-                <html:div class="kpiIconWrap" style="background:#FCE8E6;color:#D93025">&#x1F6A8;</html:div>
-                <html:div class="kpiBody">
-                    <html:span class="kpiValue">192&#xAC74;</html:span>
-                    <html:span class="kpiLabel">&#xACB0;&#xD488; &#xC704;&#xD5D8;</html:span>
-                    <html:span class="kpiSublabel">&#xC989;&#xC2DC; &#xC870;&#xCE58; &#x2192;</html:span>
-                </html:div>
-            </html:div>
-            <html:div class="kpiCard highlight">
-                <html:div class="kpiIconWrap" style="background:#FEF3E0;color:#E37400">&#x1F4CB;</html:div>
-                <html:div class="kpiBody">
-                    <html:span class="kpiValue">14&#xAC74;</html:span>
-                    <html:span class="kpiLabel">&#xBC1C;&#xC8FC; &#xB300;&#xAE30;</html:span>
-                    <html:span class="kpiSublabel">&#xC2B9;&#xC778; &#xD544;&#xC694; &#x2192;</html:span>
-                </html:div>
+    <html:div class="kpiRow">
+        <html:div class="kpiCard">
+            <html:div class="kpiIconWrap" style="background:#EBF3FE;color:#0070F2">💰</html:div>
+            <html:div class="kpiBody">
+                <html:span class="kpiValue">₩1.8억</html:span>
+                <html:span class="kpiLabel">최근 매출</html:span>
+                <html:span class="kpiChangeDown">↓ 전일 대비 -0.7%</html:span>
             </html:div>
         </html:div>
-    </VBox>
+        <html:div class="kpiCard">
+            <html:div class="kpiIconWrap" style="background:#E6F4EA;color:#188038">🏥</html:div>
+            <html:div class="kpiBody">
+                <html:span class="kpiValue">72점</html:span>
+                <html:span class="kpiLabel">재고 건전성</html:span>
+                <html:span class="kpiChangeDown">↓ 3</html:span>
+            </html:div>
+        </html:div>
+        <html:div class="kpiCard">
+            <html:div class="kpiIconWrap" style="background:#FCE8E6;color:#D93025">🚨</html:div>
+            <html:div class="kpiBody">
+                <html:span class="kpiValue">192건</html:span>
+                <html:span class="kpiLabel">결품 위험</html:span>
+                <html:span class="kpiSublabel">즉시 조치 →</html:span>
+            </html:div>
+        </html:div>
+        <html:div class="kpiCard highlight">
+            <html:div class="kpiIconWrap" style="background:#FEF3E0;color:#E37400">📋</html:div>
+            <html:div class="kpiBody">
+                <html:span class="kpiValue">14건</html:span>
+                <html:span class="kpiLabel">발주 대기</html:span>
+                <html:span class="kpiSublabel">승인 필요 →</html:span>
+            </html:div>
+        </html:div>
+    </html:div>
 </mvc:View>

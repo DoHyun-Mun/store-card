@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="store.ai.card.quicklinks.Card">
+    <html:style>
+        .shortcutRow {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.6rem;
+            padding: 0.75rem;
+            font-family: "Inter", "72", sans-serif;
+        }
+        .shortcutCard {
+            background: #fff;
+            border: 1px solid #E5E8ED;
+            border-radius: 8px;
+            padding: 0.7rem 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            cursor: pointer;
+            color: #1D2D3E;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .shortcutCard:hover {
+            background: #EBF3FE;
+            color: #0070F2;
+            border-color: #0070F2;
+        }
+    </html:style>
+    <html:div class="shortcutRow">
+        <html:a class="shortcutCard">🏷️ 상품 관리</html:a>
+        <html:a class="shortcutCard">🏪 점포 관리</html:a>
+        <html:a class="shortcutCard">📦 재고 관리</html:a>
+        <html:a class="shortcutCard">📋 발주 관리</html:a>
+        <html:a class="shortcutCard">🔮 수요 예측</html:a>
+        <html:a class="shortcutCard">🚨 이상 탐지</html:a>
+        <html:a class="shortcutCard">🎯 AI 추천</html:a>
+        <html:a class="shortcutCard">👤 고객 관리</html:a>
+    </html:div>
+</mvc:View>

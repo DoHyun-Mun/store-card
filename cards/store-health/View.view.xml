@@ -1,0 +1,48 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="store.ai.card.storehealth.Card">
+    <html:style>
+        .shGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 0.4rem;
+            padding: 0.5rem 0.75rem;
+            font-family: "Inter", "72", sans-serif;
+            max-height: 320px;
+            overflow-y: auto;
+        }
+        .shItem {
+            text-align: center;
+            padding: 0.5rem 0.3rem;
+            border-radius: 8px;
+            border: 1px solid #EEF1F5;
+            cursor: pointer;
+        }
+        .shItem.GREEN { background: #E8F5E9; }
+        .shItem.YELLOW { background: #FFF8E1; }
+        .shIcon { font-size: 1.1rem; }
+        .shScore { font-size: 0.72rem; font-weight: 700; color: #1D2D3E; }
+        .shName { font-size: 0.62rem; font-weight: 600; margin-top: 0.15rem; color: #1D2D3E; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .shSub { font-size: 0.55rem; color: #8396A8; margin-top: 0.1rem; }
+    </html:style>
+    <html:div class="shGrid">
+        <html:div class="shItem YELLOW"><html:div class="shIcon">🟡</html:div><html:div class="shScore">66점</html:div><html:div class="shName">천안 신부점</html:div><html:div class="shSub">⚠️ 8건</html:div></html:div>
+        <html:div class="shItem YELLOW"><html:div class="shIcon">🟡</html:div><html:div class="shScore">67점</html:div><html:div class="shName">명동 지점</html:div><html:div class="shSub">⚠️ 8건</html:div></html:div>
+        <html:div class="shItem YELLOW"><html:div class="shIcon">🟡</html:div><html:div class="shScore">69점</html:div><html:div class="shName">서초 지점</html:div><html:div class="shSub">⚠️ 7건</html:div></html:div>
+        <html:div class="shItem YELLOW"><html:div class="shIcon">🟡</html:div><html:div class="shScore">69점</html:div><html:div class="shName">여의도 지점</html:div><html:div class="shSub">⚠️ 6건</html:div></html:div>
+        <html:div class="shItem YELLOW"><html:div class="shIcon">🟡</html:div><html:div class="shScore">69점</html:div><html:div class="shName">홍대 지점</html:div><html:div class="shSub">⚠️ 8건</html:div></html:div>
+        <html:div class="shItem YELLOW"><html:div class="shIcon">🟡</html:div><html:div class="shScore">69점</html:div><html:div class="shName">부산 서면점</html:div><html:div class="shSub">⚠️ 10건</html:div></html:div>
+        <html:div class="shItem YELLOW"><html:div class="shIcon">🟡</html:div><html:div class="shScore">70점</html:div><html:div class="shName">잠실 지점</html:div><html:div class="shSub">⚠️ 4건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">72점</html:div><html:div class="shName">동대문 지점</html:div><html:div class="shSub">⚠️ 3건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">73점</html:div><html:div class="shName">이태원 지점</html:div><html:div class="shSub">⚠️ 5건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">74점</html:div><html:div class="shName">강남 본점</html:div><html:div class="shSub">⚠️ 5건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">75점</html:div><html:div class="shName">울산 삼산점</html:div><html:div class="shSub">⚠️ 5건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">77점</html:div><html:div class="shName">수원 인계점</html:div><html:div class="shSub">⚠️ 5건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">78점</html:div><html:div class="shName">용인 수지점</html:div><html:div class="shSub">⚠️ 8건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">79점</html:div><html:div class="shName">제주 연동점</html:div><html:div class="shSub">⚠️ 6건</html:div></html:div>
+        <html:div class="shItem GREEN"><html:div class="shIcon">🟢</html:div><html:div class="shScore">83점</html:div><html:div class="shName">성남 분당점</html:div><html:div class="shSub">⚠️ 4건</html:div></html:div>
+    </html:div>
+</mvc:View>
