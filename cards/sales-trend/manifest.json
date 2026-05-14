@@ -8,6 +8,9 @@
       "version": "1.0.0"
     }
   },
+  "sap.ui5": {
+    "componentName": "store.ai.card.salestrend"
+  },
   "sap.card": {
     "type": "Component",
     "header": {
