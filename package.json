@@ -4,7 +4,9 @@
   "description": "SAP Build Work Zone - AI Store Operations Dashboard UI Integration Cards",
   "scripts": {
     "start": "npx http-server -p 8080 -c-1",
-    "build": "echo 'No build step required for UI Integration Cards'"
+    "build": "bash scripts/build.sh",
+    "deploy": "bash scripts/deploy.sh",
+    "deploy:card": "bash scripts/deploy.sh --card"
   },
   "keywords": ["SAP", "UI Integration Card", "Work Zone", "Dashboard"],
   "author": "DoHyun Mun",
