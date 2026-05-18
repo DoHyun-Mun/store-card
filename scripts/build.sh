@@ -1,7 +1,7 @@
 #!/bin/bash
 # ═══════════════════════════════════════════════════════════════
-# Build Script - Package each card as individual zip for 
-# SAP Build Work Zone Card Repository API deployment
+# Build Script - Package each card with proper folder structure
+# Required: ZIP root must contain <sap.app.id>/ folder
 # ═══════════════════════════════════════════════════════════════
 
 set -e
@@ -28,12 +28,18 @@ for CARD_DIR in "$CARDS_DIR"/*/; do
     
     ZIP_NAME="${CARD_ID}.zip"
     
-    echo "  📦 Packaging: $CARD_NAME → $ZIP_NAME"
+    echo "  📦 Packaging: $CARD_NAME → $ZIP_NAME (root: $CARD_ID/)"
     
-    # Create zip from card directory
-    cd "$CARD_DIR"
-    zip -r "$DIST_DIR/$ZIP_NAME" . -x "*.DS_Store" > /dev/null 2>&1
-    cd "$PROJECT_DIR"
+    # ═══ 핵심 수정 ═══
+    # CARD_ID 이름의 폴더로 감싸기 위해 임시 디렉토리 사용
+    TMP_DIR=$(mktemp -d)
+    cp -r "$CARD_DIR" "$TMP_DIR/$CARD_ID"
+    
+    # 임시 디렉토리에서 zip 생성 — CARD_ID 폴더가 ZIP 루트에 들어감
+    (cd "$TMP_DIR" && zip -r "$DIST_DIR/$ZIP_NAME" "$CARD_ID" -x "*.DS_Store" > /dev/null 2>&1)
+    
+    # 임시 디렉토리 정리
+    rm -rf "$TMP_DIR"
 done
 
 echo ""
@@ -42,3 +48,5 @@ echo ""
 ls -la "$DIST_DIR"/*.zip 2>/dev/null | awk '{print "   " $NF " (" $5 " bytes)"}'
 echo ""
 echo "📁 Files are in: $DIST_DIR/"
+echo ""
+echo "💡 Ve

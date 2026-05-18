@@ -68,7 +68,7 @@
                 <html:span class="kpiSublabel">즉시 조치 →</html:span>
             </html:div>
         </html:div>
-        <html:div class="kpiCard highlight">
+        <html:div class="kpiCard">
             <html:div class="kpiIconWrap" style="background:#FEF3E0;color:#E37400">📋</html:div>
             <html:div class="kpiBody">
                 <html:span class="kpiValue">14건</html:span>

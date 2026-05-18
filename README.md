@@ -144,3 +144,19 @@ open http://localhost:8080
 ## 📸 원본 대시보드
 
 이 카드들은 [store-pjt](https://github.com/DoHyun-Mun/store-pjt) 프로젝트의 AI 대시보드를 기반으로 만들어졌습니다.
+
+## ZIP 구조 (중요!)
+
+ZIP 안의 루트에 manifest.json이 바로 있으면 안 되고, 
+sap.app.id와 동일한 이름의 폴더로 한 번 더 감싸야 함.
+
+❌ 잘못된 구조:
+my-card.zip
+├── manifest.json
+└── i18n/
+
+✅ 올바른 구조:
+my-card.zip
+└── store.ai.card.kpisummary/   ← sap.app.id 이름
+    ├── manifest.json
+    └── i18n/
